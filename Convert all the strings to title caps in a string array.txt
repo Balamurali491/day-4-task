@@ -1,0 +1,20 @@
+By using replace() function: The replace() method in JavaScript is used to search a string for a value or any expression and 
+replace it with the new value provided in the parameters. The original string is not changed by this method.<script>
+	
+function sentenceCase (str) {
+	if ((str===null) || (str===''))
+		return false;
+	else
+	str = str.toString();
+	
+	return str.replace(/\w\S*/g,
+	function(txt){return txt.charAt(0).toUpperCase() +
+		txt.substr(1).toLowerCase();});
+	}
+	
+	console.log(sentenceCase('geeks for geeks'));
+</script>
+
+Output:
+
+Geeks For Geeks
